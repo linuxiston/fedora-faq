@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 
-<html lang="ru" data-content_root="./">
+<html lang="uz" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Системное администрирование &#8212; Неофициальный FAQ по Fedora (версия 2024.01.16)</title>
+    <title>Системное администрирование &#8212; Fedora bo&#39;yicha norasmiy FAQ (talqin 2024.01.17)</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=d4148abe" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-    <script src="_static/documentation_options.js?v=49e02373"></script>
+    <script src="_static/documentation_options.js?v=4c7d64d9"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/translations.js?v=29b1f277"></script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script defer="defer" src="_static/search.js?v=63f6b15a"></script>
     <link rel="icon" href="_static/faq-icon.ico"/>
-    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
-    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Сетевое администрирование" href="networking.html" />
     <link rel="prev" title="Пакетный менеджер и установка пакетов" href="package-manager.html" />
    
@@ -100,7 +99,7 @@
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>modinfo foo-bar
 </pre></div>
 </div>
-<p>Здесь <strong>foo-bar</strong> – имя модуля, информацию о котором требуется вывести.</p>
+<p>Здесь <strong>foo-bar</strong> -- имя модуля, информацию о котором требуется вывести.</p>
 </section>
 <section id="uefi-boot-fedora">
 <span id="uefi-list"></span><span id="index-7"></span><h2>Как определить список загружаемых ОС в меню UEFI Boot из Fedora?<a class="headerlink" href="#uefi-boot-fedora" title="Link to this heading">¶</a></h2>
@@ -116,7 +115,7 @@
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo efibootmgr -o 0000,0002,0003,0001
 </pre></div>
 </div>
-<p>Здесь <strong>0000</strong> и прочие – результат предыдущего вывода утилиты. Ведущие нули указывать не обязательно.</p>
+<p>Здесь <strong>0000</strong> и прочие -- результат предыдущего вывода утилиты. Ведущие нули указывать не обязательно.</p>
 <p>Изменения вступают в силу немедленно.</p>
 </section>
 <section id="uefi-add">
@@ -181,7 +180,7 @@
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo mount -t ext4 /dev/sda3 /media/fedora
 </pre></div>
 </div>
-<p>Здесь <strong>/dev/sda3</strong> – раздел, на котором установлена ОС, а <strong>ext4</strong> – его файловая система. Внесём соответствующие правки если это не так.</p>
+<p>Здесь <strong>/dev/sda3</strong> -- раздел, на котором установлена ОС, а <strong>ext4</strong> -- его файловая система. Внесём соответствующие правки если это не так.</p>
 <p>Переходим в каталог с корневой ФС и монтируем ряд необходимых для работы окружения виртуальных ФС:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>cd /media/fedora
 sudo mount -t proc /proc proc
@@ -243,8 +242,8 @@ sudo mount -t vfat /dev/sda1 boot/efi
 </section>
 <section id="utc-localtime">
 <span id="system-time-utc"></span><span id="index-20"></span><h2>Как перевести системные часы в UTC или localtime и наоборот?<a class="headerlink" href="#utc-localtime" title="Link to this heading">¶</a></h2>
-<p>Localtime – это хранение в UEFI BIOS компьютера времени с учётом установленного в системе часового пояса. При определённых условиях это может вызывать проблемы с синхронизацией времени, а также работой нескольких операционных систем на одном компьютере.</p>
-<p>UTC – это хранение в UEFI BIOS компьютера всемирного координированного времени по Гринвичу без учёта часовых поясов. Часовыми поясами управляет операционная система, что позволяет каждому пользователю в системе, а также приложениям использовать <a class="reference internal" href="using-system.html#application-timezone"><span class="std std-ref">индивидуальные настройки</span></a>.</p>
+<p>Localtime -- это хранение в UEFI BIOS компьютера времени с учётом установленного в системе часового пояса. При определённых условиях это может вызывать проблемы с синхронизацией времени, а также работой нескольких операционных систем на одном компьютере.</p>
+<p>UTC -- это хранение в UEFI BIOS компьютера всемирного координированного времени по Гринвичу без учёта часовых поясов. Часовыми поясами управляет операционная система, что позволяет каждому пользователю в системе, а также приложениям использовать <a class="reference internal" href="using-system.html#application-timezone"><span class="std std-ref">индивидуальные настройки</span></a>.</p>
 <p>Переключение аппаратных часов компьютера в UTC из localtime:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo timedatectl set-local-rtc no
 </pre></div>
@@ -334,7 +333,7 @@ sudo fsck -t ext4 /dev/sda3
 <span id="btrfs-repair"></span><span id="index-28"></span><h2>Как восстановить данные с повреждённого раздела с BTRFS?<a class="headerlink" href="#btrfs" title="Link to this heading">¶</a></h2>
 <p>Существует несколько способов восстановления данных на повреждённом разделе с файловой системой <a class="reference internal" href="installation.html#fs-btrfs"><span class="std std-ref">BTRFS</span></a>. Они подразделяются на безопасные, небезопасные и деструктивные.</p>
 <p>Небезопасные и деструктивные могут привести к полной потере всех данных на накопителе, поэтому прибегать к ним следует лишь при крайней необходимости, если безопасные не помогли. Работать лучше всего с точной <a class="reference internal" href="using-system.html#dd-mount"><span class="std std-ref">посекторной копией</span></a> вместо реального устройства.</p>
-<p>Здесь <strong>/dev/sda2</strong> – блочное устройство раздела, данные с которого мы будем пытаться восстановить, а <strong>/media/btrfs</strong> – временная точка для его монтирования.</p>
+<p>Здесь <strong>/dev/sda2</strong> -- блочное устройство раздела, данные с которого мы будем пытаться восстановить, а <strong>/media/btrfs</strong> -- временная точка для его монтирования.</p>
 <p>Восстановление будем производить посредством загрузки с <a class="reference internal" href="installation.html#usb-flash"><span class="std std-ref">Fedora LiveUSB</span></a>, после чего сразу же запустим эмулятор терминала.</p>
 <p>Более подробную информацию можно найти в <a class="reference external" href="https://en.opensuse.org/SDB:BTRFS#How_to_repair_a_broken.2Funmountable_btrfs_filesystem">openSUSE Support Database</a> (на английском языке).</p>
 <section id="id19">
@@ -429,7 +428,7 @@ sudo btrfs scrub status /dev/sda2
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo sysctl -w foo.bar=X
 </pre></div>
 </div>
-<p>Здесь <strong>foo.bar</strong> имя параметра, а <strong>X</strong> – его значение. Изменения вступят в силу немедленно и сохранятся до перезагрузки системы.</p>
+<p>Здесь <strong>foo.bar</strong> имя параметра, а <strong>X</strong> -- его значение. Изменения вступят в силу немедленно и сохранятся до перезагрузки системы.</p>
 </section>
 <section id="sysctl-permanent">
 <span id="index-33"></span><span id="id25"></span><h2>Как задать и сохранить параметр ядра при помощи sysctl?<a class="headerlink" href="#sysctl-permanent" title="Link to this heading">¶</a></h2>
@@ -438,7 +437,7 @@ sudo btrfs scrub status /dev/sda2
 foo.bar2=X2
 </pre></div>
 </div>
-<p>Каждый параметр должен быть указан с новой строки. Здесь <strong>foo.bar</strong> имя параметра, а <strong>X</strong> – его значение.</p>
+<p>Каждый параметр должен быть указан с новой строки. Здесь <strong>foo.bar</strong> имя параметра, а <strong>X</strong> -- его значение.</p>
 <p>Для вступления изменений в силу требуется перезагрузка:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo systemctl reboot
 </pre></div>
@@ -449,12 +448,12 @@ foo.bar2=X2
 <p>При загрузке ядро проверяет следующие каталоги в поисках <strong>.conf</strong> файлов:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">/usr/lib/sysctl.d</span></code> – предустановленные конфиги системы и определённых пакетов;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/run/sysctl.d</span></code> – различные конфиги, сгенерированные в рантайме;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">/etc/sysctl.d</span></code> – пользовательские конфиги.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/usr/lib/sysctl.d</span></code> -- предустановленные конфиги системы и определённых пакетов;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/run/sysctl.d</span></code> -- различные конфиги, сгенерированные в рантайме;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">/etc/sysctl.d</span></code> -- пользовательские конфиги.</p></li>
 </ol>
 </div></blockquote>
-<p>Порядок выполнения – в алфавитном порядке, поэтому для его изменения многие конфиги содержат цифры и буквы. Например конфиг <code class="docutils literal notranslate"><span class="pre">00-foobar.conf</span></code> выполнится раньше, чем <code class="docutils literal notranslate"><span class="pre">zz-foobar.conf</span></code>.</p>
+<p>Порядок выполнения -- в алфавитном порядке, поэтому для его изменения многие конфиги содержат цифры и буквы. Например конфиг <code class="docutils literal notranslate"><span class="pre">00-foobar.conf</span></code> выполнится раньше, чем <code class="docutils literal notranslate"><span class="pre">zz-foobar.conf</span></code>.</p>
 </section>
 <section id="configure-runlevel">
 <span id="index-35"></span><span id="id27"></span><h2>Как переключить запуск системы в текстовый режим и обратно?<a class="headerlink" href="#configure-runlevel" title="Link to this heading">¶</a></h2>
@@ -528,7 +527,7 @@ foo.bar2=X2
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo xfs_admin -L &quot;NewLabel&quot; /dev/sda1
 </pre></div>
 </div>
-<p>Здесь <strong>/dev/sda1</strong> – раздел, на котором требуется изменить метку.</p>
+<p>Здесь <strong>/dev/sda1</strong> -- раздел, на котором требуется изменить метку.</p>
 </section>
 <section id="uuid">
 <span id="get-uuid"></span><span id="index-39"></span><h2>Как получить UUID всех смонтированных разделов?<a class="headerlink" href="#uuid" title="Link to this heading">¶</a></h2>
@@ -540,7 +539,7 @@ foo.bar2=X2
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo blkid /dev/sda1
 </pre></div>
 </div>
-<p>Здесь <strong>/dev/sda1</strong> – раздел, для которого требуется вывести UUID.</p>
+<p>Здесь <strong>/dev/sda1</strong> -- раздел, для которого требуется вывести UUID.</p>
 </section>
 <section id="change-uuid">
 <span id="index-40"></span><span id="id30"></span><h2>Как изменить UUID раздела?<a class="headerlink" href="#change-uuid" title="Link to this heading">¶</a></h2>
@@ -552,7 +551,7 @@ foo.bar2=X2
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo xfs_admin -U generate /dev/sda1
 </pre></div>
 </div>
-<p>Здесь <strong>/dev/sda1</strong> – раздел, на котором требуется изменить UUID.</p>
+<p>Здесь <strong>/dev/sda1</strong> -- раздел, на котором требуется изменить UUID.</p>
 </section>
 <section id="pid">
 <span id="get-pid"></span><span id="index-41"></span><h2>Как получить PID запущенного процесса?<a class="headerlink" href="#pid" title="Link to this heading">¶</a></h2>
@@ -578,7 +577,7 @@ foo.bar2=X2
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>kill -15 XXXX
 </pre></div>
 </div>
-<p>Здесь <strong>XXXX</strong> – PID нужного процесса.</p>
+<p>Здесь <strong>XXXX</strong> -- PID нужного процесса.</p>
 <p>Вместо явного указания PID процесса существует возможность завершить работу процесса с указанным именем посредством <strong>killall</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>killall -15 foo-bar
 </pre></div>
@@ -593,7 +592,7 @@ foo.bar2=X2
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>kill -9 XXXX
 </pre></div>
 </div>
-<p>Здесь <strong>XXXX</strong> – PID нужного процесса.</p>
+<p>Здесь <strong>XXXX</strong> -- PID нужного процесса.</p>
 <p>Вместо явного указания PID процесса существует возможность завершить работу процесса с указанным именем посредством <strong>killall</strong>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>killall -9 foo-bar
 </pre></div>
@@ -650,7 +649,7 @@ foo.bar2=X2
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo bash -c &quot;echo X &gt; /proc/irq/Y/smp_affinity&quot;
 </pre></div>
 </div>
-<p>Здесь <strong>X</strong> – маска процессора (CPU affinity), который будет обрабатывать данное прерывание, а <strong>Y</strong> – номер прерывания (указан в левом столбце таблицы прерываний).</p>
+<p>Здесь <strong>X</strong> -- маска процессора (CPU affinity), который будет обрабатывать данное прерывание, а <strong>Y</strong> -- номер прерывания (указан в левом столбце таблицы прерываний).</p>
 <p>Чтобы вычислить маску следует возвести число 2 в степень, равную порядкому номеру процессора, и результат перевести в шестнадцатиричную систему счисления.</p>
 </section>
 <section id="too-many-open-files">
@@ -721,7 +720,7 @@ foo-bar       hard    nofile          8192
 <section id="effective-uid-real-uid">
 <span id="euid-vs-ruid"></span><span id="index-57"></span><h2>Чем отличается Effective UID процесса от Real UID?<a class="headerlink" href="#effective-uid-real-uid" title="Link to this heading">¶</a></h2>
 <p>В мире UNIX считается нормальным, когда один процесс запускается от одного пользователя, но при этом получает права совсем другого (чаще всего это суперпользователь root).</p>
-<p>В качестве простого примера рассмтрим ситуацию, когда пользователь <strong>user1</strong> запускает бинарник с установленным suid-битом <strong>/usr/bin/foo-bar</strong>. Таким образом, у процесса <strong>foo-bar</strong> в качестве <em>Real user ID</em> будет установлен <strong>user1</strong>, а <em>Effective user ID</em> – <strong>root</strong>. Это сделано для того, чтобы приложение могло самостоятельно отказаться от повышенных прав, либо переключаться между ними при помощи соответствующего системного вызова.</p>
+<p>В качестве простого примера рассмтрим ситуацию, когда пользователь <strong>user1</strong> запускает бинарник с установленным suid-битом <strong>/usr/bin/foo-bar</strong>. Таким образом, у процесса <strong>foo-bar</strong> в качестве <em>Real user ID</em> будет установлен <strong>user1</strong>, а <em>Effective user ID</em> -- <strong>root</strong>. Это сделано для того, чтобы приложение могло самостоятельно отказаться от повышенных прав, либо переключаться между ними при помощи соответствующего системного вызова.</p>
 </section>
 <section id="copying-data">
 <span id="index-58"></span><span id="id45"></span><h2>Как скопировать данные с одного раздела на другой?<a class="headerlink" href="#copying-data" title="Link to this heading">¶</a></h2>
@@ -793,7 +792,7 @@ Host bar
     IdentityFile ~/.ssh/id_rsa2
 </pre></div>
 </div>
-<p>Здесь <code class="docutils literal notranslate"><span class="pre">foo</span></code> и <code class="docutils literal notranslate"><span class="pre">bar</span></code> – имена сокращений (алиасов), которые будут использоваться для подключения. Для каждого могут быть указаны индивидуальные настройки, включая <a class="reference internal" href="security.html#ssh-keys"><span class="std std-ref">различные SSH ключи</span></a> при помощи директивы <code class="docutils literal notranslate"><span class="pre">IdentityFile</span></code>.</p>
+<p>Здесь <code class="docutils literal notranslate"><span class="pre">foo</span></code> и <code class="docutils literal notranslate"><span class="pre">bar</span></code> -- имена сокращений (алиасов), которые будут использоваться для подключения. Для каждого могут быть указаны индивидуальные настройки, включая <a class="reference internal" href="security.html#ssh-keys"><span class="std std-ref">различные SSH ключи</span></a> при помощи директивы <code class="docutils literal notranslate"><span class="pre">IdentityFile</span></code>.</p>
 <p>Подключимся к первому серверу:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ssh foo
 </pre></div>
@@ -805,7 +804,7 @@ Host bar
 </section>
 <section id="fuse">
 <span id="fuse-info"></span><span id="index-63"></span><h2>Что такое FUSE?<a class="headerlink" href="#fuse" title="Link to this heading">¶</a></h2>
-<p>FUSE (file system in userspace) – это модуль ядра и набор утилит для работы с ним, предназначенные для запуска различных файловых систем в пользовательском пространстве.</p>
+<p>FUSE (file system in userspace) -- это модуль ядра и набор утилит для работы с ним, предназначенные для запуска различных файловых систем в пользовательском пространстве.</p>
 <p>Благодаря FUSE в Fedora могут использоваться файловые системы, которые по какой-либо причине не могут войти напрямую в состав ядра Linux из-за лицензионных проблем, либо патентов.</p>
 <p>Некоторые примеры подобных реализаций:</p>
 <blockquote>
@@ -835,7 +834,7 @@ Host bar
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>kinit foo-bar@FEDORAPROJECT.ORG
 </pre></div>
 </div>
-<p>Здесь <strong>foo-bar</strong> – логин на удалённой системе, а <strong>FEDORAPROJECT.ORG</strong> – имя домена (должно быть указано строго в верхнем регистре).</p>
+<p>Здесь <strong>foo-bar</strong> -- логин на удалённой системе, а <strong>FEDORAPROJECT.ORG</strong> -- имя домена (должно быть указано строго в верхнем регистре).</p>
 <p>В случае ввода верных авторизационных данных процесс должен пройти в штатном режиме.</p>
 </section>
 <section id="kerberos-renew">
@@ -849,7 +848,7 @@ Host bar
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>kinit -R foo-bar@FEDORAPROJECT.ORG
 </pre></div>
 </div>
-<p>Здесь <strong>foo-bar</strong> – логин на удалённой системе, а <strong>FEDORAPROJECT.ORG</strong> – имя домена (должно быть указано строго в верхнем регистре).</p>
+<p>Здесь <strong>foo-bar</strong> -- логин на удалённой системе, а <strong>FEDORAPROJECT.ORG</strong> -- имя домена (должно быть указано строго в верхнем регистре).</p>
 </section>
 <section id="delete-inode">
 <span id="index-66"></span><span id="id50"></span><h2>В каталоге появился файл с некорректным именем, который не удаётся удалить. Что делать?<a class="headerlink" href="#delete-inode" title="Link to this heading">¶</a></h2>
@@ -867,7 +866,7 @@ Host bar
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>find . -maxdepth 1 -type f -inum XXXXXXX -delete
 </pre></div>
 </div>
-<p>Здесь <strong>XXXXXXX</strong> – номер I-узла некорректного файла.</p>
+<p>Здесь <strong>XXXXXXX</strong> -- номер I-узла некорректного файла.</p>
 </section>
 <section id="ext4">
 <span id="defrag-info"></span><span id="index-67"></span><h2>Нужно ли выполнять дефрагментацию для разделов с ФС ext4?<a class="headerlink" href="#ext4" title="Link to this heading">¶</a></h2>
@@ -895,7 +894,7 @@ Host bar
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo fsck -t ext4 -fn /dev/sda2
 </pre></div>
 </div>
-<p>Здесь <strong>/dev/sda2</strong> – раздел, на котором следует провести процесс дефрагментации. Операция займёт достаточно много времени (в зависимости от размера диска). Прерывать её не следует, т.к. это может привести к полной потере данных.</p>
+<p>Здесь <strong>/dev/sda2</strong> -- раздел, на котором следует провести процесс дефрагментации. Операция займёт достаточно много времени (в зависимости от размера диска). Прерывать её не следует, т.к. это может привести к полной потере данных.</p>
 </section>
 <section id="cpu-cores">
 <span id="index-70"></span><span id="id53"></span><h2>Как определить количество доступных процессоров или ядер?<a class="headerlink" href="#cpu-cores" title="Link to this heading">¶</a></h2>
@@ -960,7 +959,7 @@ sudo chmod 0644 /etc/polkit-1/rules.d/10-mount-nopass.rules
 </section>
 <section id="coredump-systemd">
 <span id="codedump-info"></span><span id="index-73"></span><h2>Что такое coredump и почему systemd сохраняет их?<a class="headerlink" href="#coredump-systemd" title="Link to this heading">¶</a></h2>
-<p>Coredump – это дамп закрытой памяти процесса, создаваемый в момент возникновения в нём внештатной ситуации, приводящей к аварийному завершению. Эти дампы используются всевозможными системами анализа и необходимы для создания правильных <a class="reference internal" href="generic-info.html#bug-report"><span class="std std-ref">баг-репортов</span></a>.</p>
+<p>Coredump -- это дамп закрытой памяти процесса, создаваемый в момент возникновения в нём внештатной ситуации, приводящей к аварийному завершению. Эти дампы используются всевозможными системами анализа и необходимы для создания правильных <a class="reference internal" href="generic-info.html#bug-report"><span class="std std-ref">баг-репортов</span></a>.</p>
 <p>По умолчанию systemd при падениях любых процессов (как системных, так и пользовательских), сохраняет дампы их закрытой памяти в каталоге <strong>/var/lib/systemd/coredump</strong>, поэтому он может занимать десятки гигабайт.</p>
 <p>Возможно их <a class="reference internal" href="#codedump-limit"><span class="std std-ref">ограничить</span></a>, либо полностью <a class="reference internal" href="#codedump-disable"><span class="std std-ref">отключить</span></a>.</p>
 </section>
@@ -1005,7 +1004,7 @@ sudo chmod 0644 /etc/polkit-1/rules.d/10-mount-nopass.rules
 </section>
 <section id="modprobe">
 <span id="modprobe-sberr"></span><span id="index-77"></span><h2>При загрузке модуля ядра через modprobe я получаю ошибку. Как исправить?<a class="headerlink" href="#modprobe" title="Link to this heading">¶</a></h2>
-<p>Если при попытке загрузки модуля ядра при помощи modprobe с правами суперпользователя воникает ошибка <em>modprobe: ERROR: could not insert „XXXXXXX“: Operation not permitted</em>, значит включён режим <a class="reference internal" href="installation.html#secure-boot"><span class="std std-ref">UEFI Secure Boot</span></a>, а данный модуль не имеет цифровой подписи.</p>
+<p>Если при попытке загрузки модуля ядра при помощи modprobe с правами суперпользователя воникает ошибка <em>modprobe: ERROR: could not insert 'XXXXXXX': Operation not permitted</em>, значит включён режим <a class="reference internal" href="installation.html#secure-boot"><span class="std std-ref">UEFI Secure Boot</span></a>, а данный модуль не имеет цифровой подписи.</p>
 <p>Необходимо либо отключить Secure Boot в настройках UEFI компьютера, либо подписать его действительной цифровой подписью.</p>
 </section>
 <section id="systemd-boot">
@@ -1016,7 +1015,7 @@ sudo chmod 0644 /etc/polkit-1/rules.d/10-mount-nopass.rules
 <span id="index-79"></span><span id="id60"></span><h2>Почему моё приложение не может использовать порт ниже 1024?<a class="headerlink" href="#port-bind-priv" title="Link to this heading">¶</a></h2>
 <p>Диапазон портов 1-1023 зарезервирован для суперпользователя, а также приложений, наделённых его правами.</p>
 <p>Стандартная схема использования: сервис запускается с правами root, начинает прослушивать необходимый ему порт, а затем <a class="reference internal" href="#euid-vs-ruid"><span class="std std-ref">сбрасывает</span></a> повышенные права. Так поступают большинство популярных серверных приложений (apache, nginx и т.д.).</p>
-<p>Существует и альтернативный вариант – запуск при помощи <a class="reference internal" href="#port-bind-systemd"><span class="std std-ref">особого юнита systemd</span></a>.</p>
+<p>Существует и альтернативный вариант -- запуск при помощи <a class="reference internal" href="#port-bind-systemd"><span class="std std-ref">особого юнита systemd</span></a>.</p>
 </section>
 <section id="port-bind-systemd">
 <span id="index-80"></span><span id="id61"></span><h2>Как запустить приложение на порту ниже 1024 при помощи systemd?<a class="headerlink" href="#port-bind-systemd" title="Link to this heading">¶</a></h2>
@@ -1098,7 +1097,7 @@ sudo chmod 0644 /etc/polkit-1/rules.d/10-mount-nopass.rules
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo tune2fs -m 0 /dev/sdX1
 </pre></div>
 </div>
-<p>Здесь <strong>0</strong> – процентное соотношение зарезервированных блоков к обычным (отсутствуют), а <strong>/dev/sdX1</strong> – раздел диска, на котором будут произведены изменения.</p>
+<p>Здесь <strong>0</strong> -- процентное соотношение зарезервированных блоков к обычным (отсутствуют), а <strong>/dev/sdX1</strong> -- раздел диска, на котором будут произведены изменения.</p>
 </section>
 <section id="zswap-fedora">
 <span id="zswap"></span><span id="index-86"></span><h2>Как включить поддержку zswap в Fedora?<a class="headerlink" href="#zswap-fedora" title="Link to this heading">¶</a></h2>
@@ -1187,7 +1186,7 @@ sudo chmod 0644 /etc/polkit-1/rules.d/10-mount-nopass.rules
 sudo rmdir /media/foo-bar
 </pre></div>
 </div>
-<p>Здесь <strong>/dev/sdX2</strong> – накопитель с файловой системой <a class="reference internal" href="installation.html#fs-btrfs"><span class="std std-ref">BTRFS</span></a>.</p>
+<p>Здесь <strong>/dev/sdX2</strong> -- накопитель с файловой системой <a class="reference internal" href="installation.html#fs-btrfs"><span class="std std-ref">BTRFS</span></a>.</p>
 </section>
 <section id="btrfs-compression">
 <span id="index-94"></span><span id="id73"></span><h2>Как включить сжатие данных на разделе с BTRFS?<a class="headerlink" href="#btrfs-compression" title="Link to this heading">¶</a></h2>
@@ -1201,7 +1200,7 @@ sudo rmdir /media/foo-bar
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>UUID=XXXXX-XXXXX /   btrfs   compress=zstd:1,subvol=fedora   0 0
 </pre></div>
 </div>
-<p>Здесь <strong>XXXXX-XXXXX</strong> – <a class="reference internal" href="#get-uuid"><span class="std std-ref">UUID раздела</span></a>.</p>
+<p>Здесь <strong>XXXXX-XXXXX</strong> -- <a class="reference internal" href="#get-uuid"><span class="std std-ref">UUID раздела</span></a>.</p>
 <p>Сохраним изменения и произведём перезагрузку системы:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo systemctl reboot
 </pre></div>
@@ -1248,17 +1247,17 @@ sudo rmdir /media/foo-bar
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Быстрый поиск</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Искать" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="generic-info.html">Asosiy ma’lumotlar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generic-info.html">Asosiy ma'lumotlar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Установка системы</a></li>
 <li class="toctree-l1"><a class="reference internal" href="package-manager.html">Пакетный менеджер и установка пакетов</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Системное администрирование</a><ul>
@@ -1378,8 +1377,8 @@ sudo rmdir /media/foo-bar
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="package-manager.html" title="предыдущая глава">Пакетный менеджер и установка пакетов</a></li>
-      <li>Next: <a href="networking.html" title="следующая глава">Сетевое администрирование</a></li>
+      <li>Previous: <a href="package-manager.html" title="previous chapter">Пакетный менеджер и установка пакетов</a></li>
+      <li>Next: <a href="networking.html" title="next chapter">Сетевое администрирование</a></li>
   </ul></li>
 </ul>
 </div>
@@ -1388,12 +1387,12 @@ sudo rmdir /media/foo-bar
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &#169;2018 - 2024, EasyCoding Team and contributors.
+      &#169;2018 - 2024, EasyCoding Team, Linuxiston and contributors.
       
     </div>
 
     
-    <a href="https://github.com/RussianFedora/FAQ" class="github">
+    <a href="https://github.com/Linuxiston/fedora-faq" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="_static/forkme_right_green.png" alt="Fork me on GitHub"  class="github"/>
     </a>
     

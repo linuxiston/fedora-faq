@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 
-<html lang="ru" data-content_root="./">
+<html lang="uz" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Пакетный менеджер и установка пакетов &#8212; Неофициальный FAQ по Fedora (версия 2024.01.16)</title>
+    <title>Пакетный менеджер и установка пакетов &#8212; Fedora bo&#39;yicha norasmiy FAQ (talqin 2024.01.17)</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=d4148abe" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-    <script src="_static/documentation_options.js?v=49e02373"></script>
+    <script src="_static/documentation_options.js?v=4c7d64d9"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/translations.js?v=29b1f277"></script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script defer="defer" src="_static/search.js?v=63f6b15a"></script>
     <link rel="icon" href="_static/faq-icon.ico"/>
-    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
-    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Системное администрирование" href="administration.html" />
     <link rel="prev" title="Установка системы" href="installation.html" />
    
@@ -51,7 +50,7 @@
 </section>
 <section id="flatpak">
 <span id="flatpak-info"></span><span id="index-2"></span><h2>Что такое Flatpak пакеты?<a class="headerlink" href="#flatpak" title="Link to this heading">¶</a></h2>
-<p>Flatpak – это современный прогрессивный формат самодостаточных пакетов для GNU/Linux. Он поддерживает рантаймы, изоляцию внутри песочниц, установку без наличия прав суперпользователя и многое другое.</p>
+<p>Flatpak -- это современный прогрессивный формат самодостаточных пакетов для GNU/Linux. Он поддерживает рантаймы, изоляцию внутри песочниц, установку без наличия прав суперпользователя и многое другое.</p>
 </section>
 <section id="flatpak-advantages">
 <span id="index-3"></span><span id="id4"></span><h2>Какие преимущества и недостатки у Flatpak пакетов?<a class="headerlink" href="#flatpak-advantages" title="Link to this heading">¶</a></h2>
@@ -129,7 +128,7 @@
 </pre></div>
 </div>
 <p>Теперь внутри него допускается использовать любые механизмы установки пакетов Python: pip, install.py и т.д.</p>
-<p>Здесь <strong>foo-bar</strong> – название venv контейнера. Допускается создавать неограниченное их количество.</p>
+<p>Здесь <strong>foo-bar</strong> -- название venv контейнера. Допускается создавать неограниченное их количество.</p>
 </section>
 <section id="python-venv-remove">
 <span id="index-8"></span><span id="id6"></span><h2>Как удалить установленные пакеты из Python Virtual Environment?<a class="headerlink" href="#python-venv-remove" title="Link to this heading">¶</a></h2>
@@ -249,7 +248,7 @@ sudo dnf system-upgrade reboot
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>installonly_limit=2
 </pre></div>
 </div>
-<p>Минимально допустимое значение – <strong>2</strong> (будут сохраняться два ядра: текущее и предыдущее).</p>
+<p>Минимально допустимое значение -- <strong>2</strong> (будут сохраняться два ядра: текущее и предыдущее).</p>
 </section>
 <section id="dnf-proxy">
 <span id="index-22"></span><span id="id15"></span><h2>Как настроить работу dnf через прокси?<a class="headerlink" href="#dnf-proxy" title="Link to this heading">¶</a></h2>
@@ -267,18 +266,18 @@ sudo dnf system-upgrade reboot
 proxy_password=PASSWORD
 </pre></div>
 </div>
-<p>Здесь <strong>LOGIN</strong> – логин пользователя на прокси-сервере, а <strong>PASSWORD</strong> – его пароль.</p>
+<p>Здесь <strong>LOGIN</strong> -- логин пользователя на прокси-сервере, а <strong>PASSWORD</strong> -- его пароль.</p>
 <p>Обычно DNF корректно определяет тип авторизации, используемый прокси-сервером, но иногда (в случае HTTP-прокси) этот механизм работает некорретно. В этом случае достаточно указать ее тип:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>proxy_auth_method=METHOD
 </pre></div>
 </div>
-<p>Здесь <strong>METHOD</strong> – название метода аутентификации, используемого прокси-сервером.</p>
+<p>Здесь <strong>METHOD</strong> -- название метода аутентификации, используемого прокси-сервером.</p>
 <p>Список часто используемых методов:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">basic</span></code> – базовая HTTP аутентификация, вероятно вы используете именно этот метод;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">digest</span></code> – HTTP дайджест-аутентификация;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ntlm</span></code> – NTLM HTTP аутентификация, активно применяется в среде продуктов Microsoft.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">basic</span></code> -- базовая HTTP аутентификация, вероятно вы используете именно этот метод;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">digest</span></code> -- HTTP дайджест-аутентификация;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ntlm</span></code> -- NTLM HTTP аутентификация, активно применяется в среде продуктов Microsoft.</p></li>
 </ul>
 </div></blockquote>
 <p>Подробнее о поддерживаемых методах аутентификации см. <a class="reference external" href="https://dnf.readthedocs.io/en/latest/conf_ref.html#options-for-both-main-and-repo">в документации</a>.</p>
@@ -346,7 +345,7 @@ proxy_password=PASSWORD
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo dnf remove kernel-6.0.8* kernel-core-6.0.8* kernel-modules-6.0.8* kernel-devel-6.0.8*
 </pre></div>
 </div>
-<p>Здесь <strong>6.0.8</strong> – это версия удаляемого ядра.</p>
+<p>Здесь <strong>6.0.8</strong> -- это версия удаляемого ядра.</p>
 </section>
 <section id="rd-repositories">
 <span id="index-28"></span><span id="id22"></span><h2>Какие сторонние репозитории лучше всего подключать?<a class="headerlink" href="#rd-repositories" title="Link to this heading">¶</a></h2>
@@ -516,7 +515,7 @@ proxy_password=PASSWORD
 <p>Для установки обновлений посредством dnf рекомендуется два варианта:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>переключение в консоль фреймбуфера посредством нажатия комбинации <strong>Ctrl+Alt+F3</strong> (для возврата в графический режим – <strong>Ctrl+Alt+F1</strong>), выполнение в ней нового входа в систему и запуск процесса обновления;</p></li>
+<li><p>переключение в консоль фреймбуфера посредством нажатия комбинации <strong>Ctrl+Alt+F3</strong> (для возврата в графический режим -- <strong>Ctrl+Alt+F1</strong>), выполнение в ней нового входа в систему и запуск процесса обновления;</p></li>
 <li><p>использование screen сессии. Тогда, в случае падения эмулятора терминала, процесс не будет прерван.</p></li>
 </ul>
 </div></blockquote>
@@ -537,7 +536,7 @@ proxy_password=PASSWORD
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo dnf upgrade --refresh --enablerepo=updates-testing --advisory=FEDORA-2018-XXXXXXXXX
 </pre></div>
 </div>
-<p>Здесь <strong>FEDORA-2018-XXXXXXXXX</strong> – уникальный идентификатор обновления из Bodhi.</p>
+<p>Здесь <strong>FEDORA-2018-XXXXXXXXX</strong> -- уникальный идентификатор обновления из Bodhi.</p>
 </section>
 <section id="koji">
 <span id="koji-download"></span><span id="index-49"></span><h2>Как скачать определённую сборку пакета из Koji?<a class="headerlink" href="#koji" title="Link to this heading">¶</a></h2>
@@ -626,7 +625,7 @@ proxy_password=PASSWORD
 </section>
 <section id="dnf-groups">
 <span id="index-59"></span><span id="id49"></span><h2>Безопасно ли устанавливать и удалять пакеты группами?<a class="headerlink" href="#dnf-groups" title="Link to this heading">¶</a></h2>
-<p><a class="reference internal" href="#dnf-group-install"><span class="std std-ref">Устанавливать</span></a> пакеты группами абсолютно безопасно, однако <a class="reference internal" href="#dnf-group-remove"><span class="std std-ref">удалять</span></a> – нет, т.к. это приведёт к удалению всех её членов, что может привести к полной неработоспособности системы из-за удаления важных компонентов, таких как графическое окружение, менеджер входа в систему и т.д.</p>
+<p><a class="reference internal" href="#dnf-group-install"><span class="std std-ref">Устанавливать</span></a> пакеты группами абсолютно безопасно, однако <a class="reference internal" href="#dnf-group-remove"><span class="std std-ref">удалять</span></a> -- нет, т.к. это приведёт к удалению всех её членов, что может привести к полной неработоспособности системы из-за удаления важных компонентов, таких как графическое окружение, менеджер входа в систему и т.д.</p>
 <p>Вывод списка доступных групп:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo dnf grouplist
 </pre></div>
@@ -732,7 +731,7 @@ proxy_password=PASSWORD
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rpm -qa --dbpath /path/to/other/var/lib/rpm
 </pre></div>
 </div>
-<p>Здесь <strong>/path/to/other/var/lib/rpm</strong> – полный путь к базе RPM.</p>
+<p>Здесь <strong>/path/to/other/var/lib/rpm</strong> -- полный путь к базе RPM.</p>
 </section>
 <section id="rpm-reinstall-package">
 <span id="index-73"></span><span id="id63"></span><h2>Как мне переустановить пакет?<a class="headerlink" href="#rpm-reinstall-package" title="Link to this heading">¶</a></h2>
@@ -752,8 +751,8 @@ proxy_password=PASSWORD
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>rpm -qf /path/to/file
 </pre></div>
 </div>
-<p>Здесь <strong>/path/to/file</strong> – абсолютный путь к файлу, который необходимо проверить.</p>
-<p>Если принадлежность установлена, будет выдано полное имя пакета. В противном случае – сообщение об ошибке.</p>
+<p>Здесь <strong>/path/to/file</strong> -- абсолютный путь к файлу, который необходимо проверить.</p>
+<p>Если принадлежность установлена, будет выдано полное имя пакета. В противном случае -- сообщение об ошибке.</p>
 </section>
 <section id="rpm-check-system">
 <span id="index-75"></span><span id="id65"></span><h2>Как проверить какие файлы в системе были изменены?<a class="headerlink" href="#rpm-check-system" title="Link to this heading">¶</a></h2>
@@ -897,17 +896,17 @@ cat /path/to/foo-bar-1.0.0-1.fc38.x86_64.rpm | rpm2archive - | tar -xz -C /tmp/f
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Быстрый поиск</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Искать" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="generic-info.html">Asosiy ma’lumotlar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generic-info.html">Asosiy ma'lumotlar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Установка системы</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Пакетный менеджер и установка пакетов</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#pkg-manager">Какой менеджер пакетов используется в настоящее время?</a></li>
@@ -1015,8 +1014,8 @@ cat /path/to/foo-bar-1.0.0-1.fc38.x86_64.rpm | rpm2archive - | tar -xz -C /tmp/f
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="installation.html" title="предыдущая глава">Установка системы</a></li>
-      <li>Next: <a href="administration.html" title="следующая глава">Системное администрирование</a></li>
+      <li>Previous: <a href="installation.html" title="previous chapter">Установка системы</a></li>
+      <li>Next: <a href="administration.html" title="next chapter">Системное администрирование</a></li>
   </ul></li>
 </ul>
 </div>
@@ -1025,12 +1024,12 @@ cat /path/to/foo-bar-1.0.0-1.fc38.x86_64.rpm | rpm2archive - | tar -xz -C /tmp/f
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &#169;2018 - 2024, EasyCoding Team and contributors.
+      &#169;2018 - 2024, EasyCoding Team, Linuxiston and contributors.
       
     </div>
 
     
-    <a href="https://github.com/RussianFedora/FAQ" class="github">
+    <a href="https://github.com/Linuxiston/fedora-faq" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="_static/forkme_right_green.png" alt="Fork me on GitHub"  class="github"/>
     </a>
     

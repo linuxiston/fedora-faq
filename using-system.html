@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 
-<html lang="ru" data-content_root="./">
+<html lang="uz" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Работа в системе &#8212; Неофициальный FAQ по Fedora (версия 2024.01.16)</title>
+    <title>Работа в системе &#8212; Fedora bo&#39;yicha norasmiy FAQ (talqin 2024.01.17)</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=d4148abe" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-    <script src="_static/documentation_options.js?v=49e02373"></script>
+    <script src="_static/documentation_options.js?v=4c7d64d9"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/translations.js?v=29b1f277"></script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script defer="defer" src="_static/search.js?v=63f6b15a"></script>
     <link rel="icon" href="_static/faq-icon.ico"/>
-    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
-    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Сторонние приложения" href="using-applications.html" />
     <link rel="prev" title="Безопасность" href="security.html" />
    
@@ -72,7 +71,7 @@
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo xz -9 -T$(nproc) /path/to/image.raw
 </pre></div>
 </div>
-<p>Здесь <strong>/dev/sda1</strong> – раздел диска, резервную копию которого требуется создать, а <strong>/path/to/image.raw</strong> – полный путь к файлу образа (должен находиться на другом разделе диска).</p>
+<p>Здесь <strong>/dev/sda1</strong> -- раздел диска, резервную копию которого требуется создать, а <strong>/path/to/image.raw</strong> -- полный путь к файлу образа (должен находиться на другом разделе диска).</p>
 </section>
 <section id="initrd">
 <span id="initrd-rebuild"></span><span id="index-5"></span><h2>Как мне пересобрать образ initrd?<a class="headerlink" href="#initrd" title="Link to this heading">¶</a></h2>
@@ -99,7 +98,7 @@
 </section>
 <section id="bls">
 <span id="grub-bls-info"></span><span id="index-8"></span><h2>Что такое BLS и почему он используется по умолчанию?<a class="headerlink" href="#bls" title="Link to this heading">¶</a></h2>
-<p><a class="reference external" href="https://systemd.io/BOOT_LOADER_SPECIFICATION">BLS</a> – это универсальный формат параметров загрузки, который будет поддерживаться большинством современных загрузчиков.</p>
+<p><a class="reference external" href="https://systemd.io/BOOT_LOADER_SPECIFICATION">BLS</a> -- это универсальный формат параметров загрузки, который будет поддерживаться большинством современных загрузчиков.</p>
 <p>Все параметры генерируются на этапе компиляции ядра и сохраняются в специальном conf-файле, который устанавливается в каталог <code class="docutils literal notranslate"><span class="pre">/boot/loader/entries</span></code>.</p>
 <p>Т.к. это статические файлы, <a class="reference internal" href="administration.html#kernelpm-perm"><span class="std std-ref">нестандартные параметры ядра</span></a> теперь устанавливаются при помощи <code class="docutils literal notranslate"><span class="pre">grubenv</span></code>.</p>
 </section>
@@ -140,7 +139,7 @@
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>find ~/foo-bar -maxdepth 1 -type f -mtime +2 -delete
 </pre></div>
 </div>
-<p>Здесь <strong>~/foo-bar</strong> – начальный каталог, в котором производится удаление.</p>
+<p>Здесь <strong>~/foo-bar</strong> -- начальный каталог, в котором производится удаление.</p>
 </section>
 <section id="kde-gtk">
 <span id="double-click-speed"></span><span id="index-13"></span><h2>Я использую KDE. Как мне настроить скорость двойного клика в GTK приложениях?<a class="headerlink" href="#kde-gtk" title="Link to this heading">¶</a></h2>
@@ -209,11 +208,11 @@ export QT_SCALE_FACTOR=2
 <p>Переменная <code class="docutils literal notranslate"><span class="pre">QT_SCALE_FACTOR</span></code> задаёт коэффициент масштабирования:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>1.5</strong> – 150%;</p></li>
-<li><p><strong>1.75</strong> – 175%;</p></li>
-<li><p><strong>2</strong> – 200%;</p></li>
-<li><p><strong>2.5</strong> – 250%;</p></li>
-<li><p><strong>3</strong> – 300%.</p></li>
+<li><p><strong>1.5</strong> -- 150%;</p></li>
+<li><p><strong>1.75</strong> -- 175%;</p></li>
+<li><p><strong>2</strong> -- 200%;</p></li>
+<li><p><strong>2.5</strong> -- 250%;</p></li>
+<li><p><strong>3</strong> -- 300%.</p></li>
 </ul>
 </div></blockquote>
 <p>Более подробную информацию можно найти в <a class="reference external" href="https://doc.qt.io/qt-5/highdpi.html">документации Qt</a>.</p>
@@ -248,7 +247,7 @@ export QT_SCALE_FACTOR=2
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo dnf install pam-kwallet
 </pre></div>
 </div>
-<p>Запустим менеджер KWallet (<strong>Параметры системы</strong> – группа <strong>Предпочтения пользователя</strong> – <strong>Учётная запись</strong> – страница <strong>Бумажник</strong> – кнопка <strong>Запустить управление бумажниками</strong>), нажмём кнопку <strong>Сменить пароль</strong> и укажем тот же самый пароль, который используется для текущей учётной записи.</p>
+<p>Запустим менеджер KWallet (<strong>Параметры системы</strong> -- группа <strong>Предпочтения пользователя</strong> -- <strong>Учётная запись</strong> -- страница <strong>Бумажник</strong> -- кнопка <strong>Запустить управление бумажниками</strong>), нажмём кнопку <strong>Сменить пароль</strong> и укажем тот же самый пароль, который используется для текущей учётной записи.</p>
 <p>Сохраняем изменения и повторно входим в систему.</p>
 </section>
 <section id="xdg-reallocate">
@@ -356,7 +355,7 @@ export QT_SCALE_FACTOR=2
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nmcli device wifi connect MY_NETWORK password XXXXXXXXXX
 </pre></div>
 </div>
-<p>Здесь <strong>MY_NETWORK</strong> – название SSID точки доступа, к которой мы планируем подключиться, а <strong>XXXXXXXXXX</strong> – её пароль.</p>
+<p>Здесь <strong>MY_NETWORK</strong> -- название SSID точки доступа, к которой мы планируем подключиться, а <strong>XXXXXXXXXX</strong> -- её пароль.</p>
 </section>
 <section id="editor-selection">
 <span id="index-31"></span><span id="id18"></span><h2>Как выбрать предпочитаемый текстовый редактор в консольном режиме?<a class="headerlink" href="#editor-selection" title="Link to this heading">¶</a></h2>
@@ -366,7 +365,7 @@ export EDITOR=vim
 export SUDO_EDITOR=vim
 </pre></div>
 </div>
-<p><strong>VISUAL</strong> – предпочитаемый текстовый редактор с графическим интерфейсом пользователя, <strong>EDITOR</strong> – текстовый, а <strong>SUDO_EDITOR</strong> используется в <a class="reference internal" href="security.html#sudo-edit-config"><span class="std std-ref">sudoedit</span></a>.</p>
+<p><strong>VISUAL</strong> -- предпочитаемый текстовый редактор с графическим интерфейсом пользователя, <strong>EDITOR</strong> -- текстовый, а <strong>SUDO_EDITOR</strong> используется в <a class="reference internal" href="security.html#sudo-edit-config"><span class="std std-ref">sudoedit</span></a>.</p>
 </section>
 <section id="git">
 <span id="editor-git"></span><span id="index-32"></span><h2>Как выбрать предпочитаемый текстовый редактор для Git?<a class="headerlink" href="#git" title="Link to this heading">¶</a></h2>
@@ -396,7 +395,7 @@ export SUDO_EDITOR=vim
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo dd if=/dev/sr0 of=/path/to/image.iso bs=4M status=progress
 </pre></div>
 </div>
-<p>Здесь <strong>/dev/sr0</strong> имя устройства привода для чтения оптических дисков, а <strong>/path/to/image.iso</strong> – файл образа, в котором будет сохранён результат.</p>
+<p>Здесь <strong>/dev/sr0</strong> имя устройства привода для чтения оптических дисков, а <strong>/path/to/image.iso</strong> -- файл образа, в котором будет сохранён результат.</p>
 </section>
 <section id="dd-mount">
 <span id="index-35"></span><span id="id19"></span><h2>Как смонтировать посекторный образ раздела?<a class="headerlink" href="#dd-mount" title="Link to this heading">¶</a></h2>
@@ -408,7 +407,7 @@ export SUDO_EDITOR=vim
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo umount /mnt/dd-image
 </pre></div>
 </div>
-<p>Здесь <strong>/path/to/image.iso</strong> – файл образа на диске.</p>
+<p>Здесь <strong>/path/to/image.iso</strong> -- файл образа на диске.</p>
 </section>
 <section id="dd-fullraw">
 <span id="index-36"></span><span id="id20"></span><h2>Как смонтировать посекторный образ диска целиком?<a class="headerlink" href="#dd-fullraw" title="Link to this heading">¶</a></h2>
@@ -427,7 +426,7 @@ export SUDO_EDITOR=vim
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo umount /mnt/dd-image
 </pre></div>
 </div>
-<p>Здесь <strong>/path/to/image.iso</strong> – файл образа на диске.</p>
+<p>Здесь <strong>/path/to/image.iso</strong> -- файл образа на диске.</p>
 </section>
 <section id="set-timezone">
 <span id="index-37"></span><span id="id21"></span><h2>Как изменить часовой пояс?<a class="headerlink" href="#set-timezone" title="Link to this heading">¶</a></h2>
@@ -468,8 +467,8 @@ export SUDO_EDITOR=vim
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo dnf install breeze-gtk
 </pre></div>
 </div>
-<p>Зайдём в <strong>Параметры системы</strong> – <strong>Внешний вид</strong> – <strong>Оформление приложений</strong> – <strong>Стиль программ GNOME (GTK+)</strong>.</p>
-<p>Выберем <strong>Breeze</strong> (при использовании тёмной темы в KDE – <strong>Breeze Dark</strong>) в качестве темы GTK2 и GTK3, а также укажем шрифт, который будет использовать при отображении диалоговых окон.</p>
+<p>Зайдём в <strong>Параметры системы</strong> -- <strong>Внешний вид</strong> -- <strong>Оформление приложений</strong> -- <strong>Стиль программ GNOME (GTK+)</strong>.</p>
+<p>Выберем <strong>Breeze</strong> (при использовании тёмной темы в KDE -- <strong>Breeze Dark</strong>) в качестве темы GTK2 и GTK3, а также укажем шрифт, который будет использовать при отображении диалоговых окон.</p>
 <p>Также установим <strong>Breeze</strong> для курсоров мыши и темы значков. Применим изменения и перезапустим все GTK приложения.</p>
 </section>
 <section id="bash-hotkeys">
@@ -477,24 +476,24 @@ export SUDO_EDITOR=vim
 <p>Существуют следующие комбинации:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>Ctrl + A</strong> – перемещает текстовый курсор на начало строки (аналогична <strong>Home</strong>);</p></li>
-<li><p><strong>Ctrl + E</strong> – перемещает текстовый курсор в конец строки (аналогична <strong>End</strong>);</p></li>
-<li><p><strong>Ctrl + B</strong> – перемещает текстовый курсор на один символ влево (аналогична стрелке влево);</p></li>
-<li><p><strong>Ctrl + F</strong> – перемещает текстовый курсор на один символ вправо (аналогична стрелке вправо);</p></li>
-<li><p><strong>Alt + B</strong> – перемещает текстовый курсор на одно слово влево;</p></li>
-<li><p><strong>Alt + F</strong> – перемещает текстовый курсор на одно слово вправо;</p></li>
-<li><p><strong>Ctrl + W</strong> – удаляет последнее слово в строке;</p></li>
-<li><p><strong>Ctrl + U</strong> – удаляет всё из строки ввода;</p></li>
-<li><p><strong>Ctrl + K</strong> – удаляет всё, что находится правее текущей позиции текстового курсора;</p></li>
-<li><p><strong>Ctrl + Y</strong> – отменяет последнюю операцию удаления;</p></li>
-<li><p><strong>Ctrl + _</strong> – отменяет любую последнюю операцию.</p></li>
+<li><p><strong>Ctrl + A</strong> -- перемещает текстовый курсор на начало строки (аналогична <strong>Home</strong>);</p></li>
+<li><p><strong>Ctrl + E</strong> -- перемещает текстовый курсор в конец строки (аналогична <strong>End</strong>);</p></li>
+<li><p><strong>Ctrl + B</strong> -- перемещает текстовый курсор на один символ влево (аналогична стрелке влево);</p></li>
+<li><p><strong>Ctrl + F</strong> -- перемещает текстовый курсор на один символ вправо (аналогична стрелке вправо);</p></li>
+<li><p><strong>Alt + B</strong> -- перемещает текстовый курсор на одно слово влево;</p></li>
+<li><p><strong>Alt + F</strong> -- перемещает текстовый курсор на одно слово вправо;</p></li>
+<li><p><strong>Ctrl + W</strong> -- удаляет последнее слово в строке;</p></li>
+<li><p><strong>Ctrl + U</strong> -- удаляет всё из строки ввода;</p></li>
+<li><p><strong>Ctrl + K</strong> -- удаляет всё, что находится правее текущей позиции текстового курсора;</p></li>
+<li><p><strong>Ctrl + Y</strong> -- отменяет последнюю операцию удаления;</p></li>
+<li><p><strong>Ctrl + _</strong> -- отменяет любую последнюю операцию.</p></li>
 </ul>
 </div></blockquote>
 </section>
 <section id="kde-link-mime">
 <span id="index-42"></span><span id="id25"></span><h2>При нажатии по любой гиперссылке она открывается не в браузере, а соответствующем приложении. Как исправить?<a class="headerlink" href="#kde-link-mime" title="Link to this heading">¶</a></h2>
 <p>Согласно настроек по умолчанию, при нажатии на любую ссылку вне браузера (например, в мессенджере) компонент KDE KIO попытается определить mime-тип файла, загружаемого по ней, и открыть её в ассоциированном с приложении. Например, если это изображение JPEG, то оно будет загружено в Gwenview.</p>
-<p>Отключить данную функцию можно в <strong>Параметры системы</strong> – <strong>Предпочтения пользователя</strong> – <strong>Приложения</strong> – <strong>Приложения по умолчанию</strong> – раздел <strong>Браузер</strong> – пункт <strong>Открывать адреса http и https</strong> – <strong>В следующем приложении</strong> – <strong>Firefox</strong>.</p>
+<p>Отключить данную функцию можно в <strong>Параметры системы</strong> -- <strong>Предпочтения пользователя</strong> -- <strong>Приложения</strong> -- <strong>Приложения по умолчанию</strong> -- раздел <strong>Браузер</strong> -- пункт <strong>Открывать адреса http и https</strong> -- <strong>В следующем приложении</strong> -- <strong>Firefox</strong>.</p>
 </section>
 <section id="file-types">
 <span id="index-43"></span><span id="id26"></span><h2>Как файловые менеджеры определяют типы файлов?<a class="headerlink" href="#file-types" title="Link to this heading">¶</a></h2>
@@ -588,7 +587,7 @@ export SUDO_EDITOR=vim
 </section>
 <section id="ntfs">
 <span id="ntfs-readonly"></span><span id="index-52"></span><h2>Все NTFS тома монтируются в режиме только для чтения. Как исправить?<a class="headerlink" href="#ntfs" title="Link to this heading">¶</a></h2>
-<p>Некорректное размонтирование разделов – это особенность работы режима гибридного завершения работы (<a class="reference external" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/distinguishing-fast-startup-from-wake-from-hibernation">hybrid shutdown</a>) в ОС Microsoft Windows, при котором система не завершает свою работу, а вместо этого всегда переходит в режим глубокого сна.</p>
+<p>Некорректное размонтирование разделов -- это особенность работы режима гибридного завершения работы (<a class="reference external" href="https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/distinguishing-fast-startup-from-wake-from-hibernation">hybrid shutdown</a>) в ОС Microsoft Windows, при котором система не завершает свою работу, а вместо этого всегда переходит в режим глубокого сна.</p>
 <p>Данный режим несовместим с другими операционными системами, в т.ч. GNU/Linux, поэтому должен быть отключён в обязательном порядке при использовании <a class="reference internal" href="installation.html#dual-boot"><span class="std std-ref">dual-boot</span></a>.</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -600,7 +599,7 @@ export SUDO_EDITOR=vim
 <section id="icon-override">
 <span id="index-53"></span><span id="id34"></span><h2>Как изменить ярлык приложения из главного меню?<a class="headerlink" href="#icon-override" title="Link to this heading">¶</a></h2>
 <p>Значки приложений главного меню расположены в каталоге <code class="docutils literal notranslate"><span class="pre">/usr/share/applications</span></code>, однако редактировать их там не следует ибо при следующем <a class="reference internal" href="package-manager.html#dnf-update"><span class="std std-ref">обновлении</span></a> все изменения будут потеряны.</p>
-<p>Вместо этого создадим локальное переопределение – скопируем desktop-файл в <code class="docutils literal notranslate"><span class="pre">~/.local/share/applications</span></code> и внесём необходимые правки.</p>
+<p>Вместо этого создадим локальное переопределение -- скопируем desktop-файл в <code class="docutils literal notranslate"><span class="pre">~/.local/share/applications</span></code> и внесём необходимые правки.</p>
 <p>Создадим каталог назначения если он отсутствует:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/.local/share/applications
 </pre></div>
@@ -643,7 +642,7 @@ export SUDO_EDITOR=vim
 </pre></div>
 </div>
 <p>В ветке <code class="docutils literal notranslate"><span class="pre">org.gnome.desktop.wm.keybindings</span></code> установим параметру <code class="docutils literal notranslate"><span class="pre">switch-input-source</span></code> желаемое значение.</p>
-<p>Обязательно убедимся в наличии квадратных скобок. Конфигурация по-умолчанию – <code class="docutils literal notranslate"><span class="pre">['&lt;Super&gt;space',</span> <span class="pre">'XF86Keyboard']</span></code>.</p>
+<p>Обязательно убедимся в наличии квадратных скобок. Конфигурация по-умолчанию -- <code class="docutils literal notranslate"><span class="pre">['&lt;Super&gt;space',</span> <span class="pre">'XF86Keyboard']</span></code>.</p>
 </section>
 </section>
 <section id="x11">
@@ -748,7 +747,7 @@ restorecon -Rv ~/.config/fontconfig
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>echo &#39;add_dracutmodules+=&quot; foo-bar &quot;&#39; | sudo tee /etc/dracut.conf.d/foo-bar.conf
 </pre></div>
 </div>
-<p>Здесь <strong>foo-bar</strong> – название модуля ядра, который требуется включить. Пробелы до и после его имени в <em>add_dracutmodules</em> обязательны.</p>
+<p>Здесь <strong>foo-bar</strong> -- название модуля ядра, который требуется включить. Пробелы до и после его имени в <em>add_dracutmodules</em> обязательны.</p>
 <p>Осуществим <a class="reference internal" href="#initrd-rebuild"><span class="std std-ref">пересборку initrd</span></a>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo dracut -f
 </pre></div>
@@ -773,17 +772,17 @@ restorecon -Rv ~/.config/fontconfig
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Быстрый поиск</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Искать" />
+      <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>document.getElementById('searchbox').style.display = "block"</script><h3>Навигация</h3>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="generic-info.html">Asosiy ma’lumotlar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generic-info.html">Asosiy ma'lumotlar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Установка системы</a></li>
 <li class="toctree-l1"><a class="reference internal" href="package-manager.html">Пакетный менеджер и установка пакетов</a></li>
 <li class="toctree-l1"><a class="reference internal" href="administration.html">Системное администрирование</a></li>
@@ -867,8 +866,8 @@ restorecon -Rv ~/.config/fontconfig
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="security.html" title="предыдущая глава">Безопасность</a></li>
-      <li>Next: <a href="using-applications.html" title="следующая глава">Сторонние приложения</a></li>
+      <li>Previous: <a href="security.html" title="previous chapter">Безопасность</a></li>
+      <li>Next: <a href="using-applications.html" title="next chapter">Сторонние приложения</a></li>
   </ul></li>
 </ul>
 </div>
@@ -877,12 +876,12 @@ restorecon -Rv ~/.config/fontconfig
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &#169;2018 - 2024, EasyCoding Team and contributors.
+      &#169;2018 - 2024, EasyCoding Team, Linuxiston and contributors.
       
     </div>
 
     
-    <a href="https://github.com/RussianFedora/FAQ" class="github">
+    <a href="https://github.com/Linuxiston/fedora-faq" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="_static/forkme_right_green.png" alt="Fork me on GitHub"  class="github"/>
     </a>
     
