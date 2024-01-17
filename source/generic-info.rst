@@ -127,7 +127,7 @@ Fedoraning ayni vaqtdagi talqini quyidagi ish stollarini qo'llab-quvvatlaydi:
 Men rolling usulidagi yangilanishlardan foydalanishni xoxlayman. Buning imkoni bormi?
 =====================================================================================
 
-Albatta, buning uchun :ref:`Fedora Rawhide <using-rawhide>`dan foydalaning.
+Albatta, buning uchun :ref:`Fedora Rawhide <using-rawhide>` dan foydalaning.
 
 .. index:: rawhide, rolling, fedora
 .. _using-rawhide:
